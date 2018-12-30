@@ -1,45 +1,36 @@
 <html>
-<head>
-    <title>Rtmp|HLS 点播测试器</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-</head>
-<body>
-
-    <div class="container">
-
-        <div id="app">
-
-            <br />
-            <h2>Rtmp|HLS 点播测试器</h2>
-
-            <div>
-                <br />
-                地址： <input v-model="rtmp" type="text" />
-
-                <a v-bind:href="play_url" target="_blank" class="btn btn-default" role="button"> 播放 </a>
-
-                <br />
-
-            </div>
-
-    </div>
-
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/vue/dist/vue.min.js"></script>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-				rtmp: 'rtmp://live.hkstv.hk.lxdns.com/live/hks1',
-            },
-			computed: {
-				play_url: function () {
-				  return "play.html?src=" + encodeURIComponent(this.rtmp);
-				}
-			}
-        })
-    </script>
-</body>
+ <head> 
+  <title>Rtmp|HLS 点播测试器</title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+ </head> 
+ <body> 
+  <div class="container"> 
+   <div id="app"> 
+    <br /> 
+    <h2>Rtmp|HLS 点播测试器</h2> 
+    <div> 
+     <br />地址： 
+     <input v-model="rtmp" type="text" /> 
+     <a v-bind:href="play_url" target="_blank" class="btn btn-default" role="button">播放</a> 
+     <br />
+    </div> 
+   </div> 
+  </div> 
+  <script src="bower_components/jquery/dist/jquery.min.js"></script> 
+  <script src="bower_components/vue/dist/vue.min.js"></script> 
+  <script>
+  var app = new Vue({
+        el: '#app',
+        data: {
+          rtmp: 'rtmp://live.hkstv.hk.lxdns.com/live/hks1',
+        },
+        computed: {
+          play_url: function() {
+            return "play.html?src=" + encodeURIComponent(this.rtmp);
+          }
+        }
+      })
+  </script>  
+ </body>
 </html>
-
