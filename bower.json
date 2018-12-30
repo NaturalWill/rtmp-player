@@ -1,0 +1,18 @@
+{
+  "name": "player",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "^2.5.13",
+    "bootstrap": "^3.3.7"
+  }
+}
